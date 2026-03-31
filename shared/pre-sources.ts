@@ -388,6 +388,13 @@ export const originSources = {
     type: "hottest",
     home: "https://juejin.cn",
   },
+  "huxiu": {
+    name: "虎嗅",
+    column: "tech",
+    color: "orange",
+    type: "realtime",
+    home: "https://www.huxiu.com",
+  },
   "ifeng": {
     name: "凤凰网",
     column: "china",

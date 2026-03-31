@@ -445,6 +445,14 @@
     "color": "blue",
     "interval": 600000
   },
+  "huxiu": {
+    "name": "虎嗅",
+    "type": "realtime",
+    "column": "tech",
+    "home": "https://www.huxiu.com",
+    "color": "orange",
+    "interval": 600000
+  },
   "ifeng": {
     "title": "热点资讯",
     "name": "凤凰网",
