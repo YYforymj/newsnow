@@ -122,6 +122,13 @@ export const originSources = {
     type: "hottest",
     color: "red",
   },
+  "huxiu": {
+    name: "虎嗅",
+    home: "https://www.huxiu.com",
+    column: "china",
+    type: "hottest",
+    color: "red",
+  },
   "tieba": {
     name: "百度贴吧",
     title: "热议",
