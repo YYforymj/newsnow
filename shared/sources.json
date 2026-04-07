@@ -182,6 +182,14 @@
     "color": "red",
     "interval": 600000
   },
+  "ithome-daily": {
+    "name": "IT之家日榜",
+    "type": "hottest",
+    "column": "tech",
+    "home": "https://www.ithome.com",
+    "color": "red",
+    "interval": 1800000
+  },
   "thepaper": {
     "title": "热榜",
     "name": "澎湃新闻",
@@ -375,35 +383,6 @@
     "color": "blue",
     "interval": 600000,
     "title": "热搜"
-  },
-  "bilibili-hot-video": {
-    "name": "哔哩哔哩",
-    "type": "hottest",
-    "disable": "cf",
-    "column": "china",
-    "home": "https://www.bilibili.com",
-    "color": "blue",
-    "interval": 600000,
-    "title": "热门视频"
-  },
-  "bilibili-ranking": {
-    "name": "哔哩哔哩",
-    "type": "hottest",
-    "disable": "cf",
-    "column": "china",
-    "home": "https://www.bilibili.com",
-    "color": "blue",
-    "interval": 1800000,
-    "title": "排行榜"
-  },
-  "kuaishou": {
-    "name": "快手",
-    "type": "hottest",
-    "disable": "cf",
-    "column": "china",
-    "home": "https://www.kuaishou.com",
-    "color": "orange",
-    "interval": 600000
   },
   "kaopu": {
     "name": "靠谱新闻",

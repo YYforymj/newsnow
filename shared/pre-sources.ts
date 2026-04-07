@@ -151,6 +151,14 @@ export const originSources = {
     type: "realtime",
     home: "https://www.ithome.com",
   },
+  "ithome-daily": {
+    name: "IT之家日榜",
+    color: "red",
+    column: "tech",
+    type: "hottest",
+    interval: Time.Common,
+    home: "https://www.ithome.com",
+  },
   "thepaper": {
     name: "澎湃新闻",
     interval: Time.Common,
