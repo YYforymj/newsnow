@@ -29,6 +29,29 @@ export const columns = {
 export const fixedColumnIds = ["focus", "hottest", "realtime"] as const satisfies Partial<ColumnID>[]
 export const hiddenColumns = Object.keys(columns).filter(id => !fixedColumnIds.includes(id as any)) as HiddenColumnID[]
 
+export const hottestDefaultExcluded = new Set<SourceID>([
+  "weibo",
+  "coolapk",
+  "douyin",
+  "tieba",
+  "xueqiu-hotstock",
+  "bilibili-hot-search",
+  "bilibili-hot-video",
+  "bilibili-ranking",
+  "baidu",
+  "nowcoder",
+  "sspai",
+  "juejin",
+  "ifeng",
+  "chongbuluo-hot",
+  "douban",
+  "steam",
+  "tencent-hot",
+  "freebuf",
+  "qqvideo-tv-hotsearch",
+  "iqiyi-hot-ranklist",
+])
+
 export const metadata: Metadata = typeSafeObjectFromEntries(typeSafeObjectEntries(columns).map(([k, v]) => {
   switch (k) {
     case "focus":
@@ -39,7 +62,9 @@ export const metadata: Metadata = typeSafeObjectFromEntries(typeSafeObjectEntrie
     case "hottest":
       return [k, {
         name: v.zh,
-        sources: typeSafeObjectEntries(sources).filter(([, v]) => v.type === "hottest" && !v.redirect).map(([k]) => k),
+        sources: typeSafeObjectEntries(sources)
+          .filter(([id, v]) => v.type === "hottest" && !v.redirect && !hottestDefaultExcluded.has(id))
+          .map(([id]) => id),
       }]
     case "realtime":
       return [k, {
